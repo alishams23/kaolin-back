@@ -13,8 +13,8 @@ def file_upload_path(instance, filename):
     return os.path.join('media/files', filename)
 
 class File(models.Model):
-    title = models.CharField(max_length=800,verbose_name="عنوان")
-    tds = models.FileField(verbose_name="فایل",upload_to=file_upload_path)
+    title = models.CharField(max_length=800)
+    tds = models.FileField(upload_to=file_upload_path)
     usage = models.TextField()
     
     
